@@ -32,7 +32,10 @@ class Hybrid_Providers_DrupalOAuth2 extends Hybrid_Provider_Model_OAuth2
 
     if (isset($this->config['redirect_uri'])) {
       //$this->api->redirect_uri = $this->config['redirect_uri'];
-        $this->api->redirect_uri = 'http://local.opigno.tm:8080/hybridauth/endpoint?hauth.done=DrupalOAuth2';
+        $this->api->redirect_uri = 'http://' .
+		$_SERVER['HTTP_HOST'] .
+		($_SERVER['SERVER_PORT'] !== 80 ? '' : ':' . $_SERVER['SERVER_PORT']) .
+		'/hybridauth/endpoint?hauth.done=DrupalOAuth2';
     }
 
     if (isset($this->config['scope']) && $this->config['scope'] !== '') {
