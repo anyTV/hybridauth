@@ -1,5 +1,9 @@
 # HybridAuth 2.6.0
 
+Update ```hybridauth/Hybrid/Providers/DrupalOAuth2.php```
+and change the redirect uri to your redirect uri
+
+
 [![Join the chat at https://gitter.im/hybridauth/hybridauth](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/hybridauth/hybridauth?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 HybridAuth enables developers to easily build social applications and tools
